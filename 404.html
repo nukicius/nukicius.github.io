@@ -29,11 +29,22 @@
             margin-left: auto;
             margin-right: auto;
         }
+        #navbutton {
+            background-color: #fdcd6c;
+            border:none;
+            cursor:pointer;
+        }
+        #navbutton:hover {
+            background-color: #d2ab5a;
+        }
+        #navbutton:active {
+            background-color: #a5884c;
+        }
     </style>
     <body>
         <div id="container">
           <header>
-                <div style="display:flex;cursor:pointer;" onclick="location.href = '';">
+                <div style="display:flex;cursor:pointer;" onclick="location.href = '../';">
                     <h1 style="padding-left: 20px;font-size:20px;padding-top:8px">nukesbrainload</h1>
                     <img src="../images/nukesbrainload.png" alt="Logo" height="40" style="padding-left:10px;padding-top:12px;"></img>
                     <div style="margin-left:10px;border-left:2px solid;height:65px"></div>
@@ -41,7 +52,7 @@
                     <marquee direction="right" style="font-size:25px;padding-top:16px">YOU GOT A 404 ERROR</marquee>
                 <div style="display:flex">
                     <div style="border-left:2px solid;height:65px"></div>
-                    <button id="navbutton" style="margin-left:10px;" onclick="location.href = '';">home</button>
+                    <button id="navbutton" style="margin-left:10px;" onclick="location.href = '../';">home</button>
                     <button id="navbutton" onclick="location.href = 'blog';">blog</button>
                 </div>
             </header>

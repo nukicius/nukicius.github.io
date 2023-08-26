@@ -6,8 +6,8 @@
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <meta content="nukesbrainload blog" property="og:title" />
         <meta content="the blog in nukesbrainload!" property="og:description" />
-        <meta content="https://nukicius.rf.gd/blog.html" property="og:url" />
-        <meta content="https://nukicius.rf.gd/images/favicon.ico" property="og:image" />
+        <meta content="https://nukicius.github.io/blog" property="og:url" />
+        <meta content="https://nukicius.github.io/images/favicon.ico" property="og:image" />
         <meta content="#fdcd6c" data-react-helmet="true" name="theme-color" />
     </head>
 
@@ -69,7 +69,7 @@
             var element1 = document.getElementById("bloghtml");
             var element2 = document.getElementById("prevnextdiv");
             window['result'] = 1;
-            element1.src = "https://nukicius.rf.gd/blog/1.html?rand=" + Math.round(Math.random() * 10000000); // the "?rand=" at the end is put to prevent iframe caching
+            element1.src = "https://nukicius.rf.gd/blog/1?rand=" + Math.round(Math.random() * 10000000); // the "?rand=" at the end is put to prevent iframe caching
             if (element2.style.display === 'none') {
                 element2.style.display = '';
             }
@@ -92,7 +92,7 @@
                 console.error("Blog value higher than amount of blog pages available, doesn't exist");
             } else {
                 window['result'] = element1.value;
-                element1.src = "https://nukicius.rf.gd/blog/" + element.value + ".html?rand=" + Math.round(Math.random() * 10000000);
+                element1.src = "https://nukicius.rf.gd/blog/" + element.value + "?rand=" + Math.round(Math.random() * 10000000);
                 if (element2.style.display === 'none') {
                     element2.style.display = '';
                 }
@@ -106,7 +106,7 @@
             var element1 = document.getElementById("bloghtml");
             var element2 = document.getElementById("prevnextdiv");
             window['result'] = randomNumber;
-            element1.src = "https://nukicius.rf.gd/blog/" + randomNumber + ".html?rand=" + Math.round(Math.random() * 10000000);
+            element1.src = "https://nukicius.rf.gd/blog/" + randomNumber + "?rand=" + Math.round(Math.random() * 10000000);
             if (element2.style.display === 'none') {
                 element2.style.display = '';
             }
@@ -115,7 +115,7 @@
             var element1 = document.getElementById("bloghtml");
             var element2 = document.getElementById("prevnextdiv");
             window['result'] = amount;
-            element1.src = "https://nukicius.rf.gd/blog/" + amount + ".html?rand=" + Math.round(Math.random() * 10000000);
+            element1.src = "https://nukicius.rf.gd/blog/" + amount + "?rand=" + Math.round(Math.random() * 10000000);
             if (element2.style.display === 'none') {
                 element2.style.display = '';
             }
@@ -126,7 +126,7 @@
                 console.error("Tried to switch to blog post before number 1, doesn't exist");
             } else {
                 result--;
-                element1.src = "https://nukicius.rf.gd/blog/" + result + ".html?rand=" + Math.round(Math.random() * 10000000);
+                element1.src = "https://nukicius.rf.gd/blog/" + result + "?rand=" + Math.round(Math.random() * 10000000);
             }
         };
         function next() {
@@ -135,7 +135,7 @@
                 console.error("Tried to switch to blog post after number " + amount + ", doesn't exist");
             } else {
                 result++;
-                element1.src = "https://nukicius.rf.gd/blog/" + result + ".html?rand=" + Math.round(Math.random() * 10000000);
+                element1.src = "https://nukicius.rf.gd/blog/" + result + "?rand=" + Math.round(Math.random() * 10000000);
             }
         };
     </script>

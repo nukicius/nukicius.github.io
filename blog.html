@@ -91,7 +91,7 @@
             } else if (element.value > amount) {
                 console.error("Blog value higher than amount of blog pages available, doesn't exist");
             } else {
-                window['result'] = element1.value;
+                window['result'] = element.value;
                 element1.src = "https://nukicius.github.io/blog/" + element.value + "?rand=" + Math.round(Math.random() * 10000000);
                 if (element2.style.display === 'none') {
                     element2.style.display = '';

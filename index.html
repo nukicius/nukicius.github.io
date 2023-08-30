@@ -56,8 +56,22 @@
         #lastfmbutton:active {
             background-color: #a5884c;
         }
-        .text {
+        #hyperlink {
+            color:#d2ab5a;
+        }
+        #hyperlink:hover {
+            color:#a5884c;
+        }
+        #hyperlink:active {
+            color:#756037;
+        }
+        .text1 {
             margin-left:10px;
+            color: #fdcd6c;
+        }
+        .text2 {
+            color: #fdcd6c;
+            text-align:center;
         }
     </style>
     <script>
@@ -91,23 +105,13 @@
                     <button id="navbutton" onclick="location.href = 'blog';">blog</button>
                 </div>
             </header>
-            <h1 style="color:#fdcd6c;text-align: center;">welcome to nukesbrainload!</h1>
+            <h1 class="text2">welcome to nukesbrainload!</h1>
             <img src="../images/nukesbrainloadextra.png" alt="Logo" style="display:block;margin-left:auto;margin-right:auto;width:500px"></img>
-            <h2 class="text" style="color:#fdcd6c">who dis?</h2>
-            <p class="text" style="color:#fdcd6c">i am nuke, aka. nukicius. im a 14 year old idiot that loves tech, music (jazz, rap, chiptune, etc), games (like oneshot, portal, gran turismo, sam and max, garrys mod, and much more), and art (although its a department im pretty damn lazy in lmao). i am also really looking forward to making new friends that are autistic like me 💀</p>
-            <h2 class="text" style="color:#fdcd6c">what is this website?</h2>
-            <p class="text" style="color:#fdcd6c">this is nukesbrainload. this website is a personal project of mine, similar to my previous, nukiwebsite. this website is my attempt at making a nicer website, to replace my carrd, and to implement a blog.</p>
-            <h2 class="text" style="color:#fdcd6c">are you proud of it?</h2>
-            <p class="text" style="color:#fdcd6c">duh you dumbass BAHAHAH</p>
-            <h2 class="text" style="color:#fdcd6c">what are you listening to?</h2>
-            <p class="text" style="color:#fdcd6c">you may press the button to show/hide my last.fm plays. its also possible to click on the image to go to my last.fm profile</p>
-            <button class="text" id="lastfmbutton" onclick="ShowLastFM()">show</button>
-            <a class="text" id="lastfm" style="display:none;margin-top:10px" href="https://www.last.fm/user/nukicius"><img src="https://lastfm-recently-played.vercel.app/api?user=nukicius" height="auto" width="350px"/></a>
-            <h2 class="text" style="color:#fdcd6c">how do we contact you?</h2>
-            <p class="text" style="color:#fdcd6c">you can always just contact me on discord. @nukicius is my username.</p>
-            <h3 class="text" style="color:#fdcd6c">have fun on the website. i hope you enjoy the design :)</h3>
-            <h6 class="text" style="color:#fdcd6c;padding-bottom:10px;">created in 2022; used in 2023</h6>
+            <h2 class="text2">i'm nuke.</h2>
+            <p class="text2">i'm 14, take interest in tech, music, games and art, and am also professionally silly :3</p>
+            <p class="text2">this website has a blog, check it out <a id="hyperlink" href="blog">here.</a></p>
+            <a id="hyperlink" style="text-align:center" href="about">learn more!!!</a>
+            <h6 class="text" style="padding-bottom:10px;">created in 2022; used in 2023</h6>
         </div>
     </body>
-
 </html>

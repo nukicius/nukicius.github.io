@@ -1,120 +1,325 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>nukesbrainload</title>
-        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-        <meta content="nukesbrainload" property="og:title" />
-        <meta content="the website of nukicius" property="og:description" />
-        <meta content="https://nukicius.github.io/" property="og:url" />
-        <meta content="https://nukicius.github.io/images/favicon.png" property="og:image" />
-        <meta content="#fdcd6c" data-react-helmet="true" name="theme-color" />
-    </head>
-
-    <style>
-        body {
-            background-color: #fdcd6c;
-            background-image: linear-gradient(to bottom left, #fdcd6c, #302715);
-            background-attachment: fixed;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            min-width:750px;
-            width: auto !important;
-        }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nuke's brainload</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta content="nuke's brainload" property="og:title" />
+    <meta content="the website of nukicius" property="og:description" />
+    <meta content="https://nukicius.github.io/" property="og:url" />
+    <meta content="https://nukicius.github.io/images/favicon.png" property="og:image" />
+    <meta content="#daad00" data-react-helmet="true" name="theme-color" />
+</head>
+<style>
+    body {
+        background-color: #251f00;
+        color: #daad00;
+        font-family: Bahnschrift;
+    }
+    header {
+        display:flex;
+        background-color: #daad00;
+        color: #251f00;
+        height: 50px;
+        width:fit-content;
+        margin-bottom:5px;
+    }
+    @media screen and (max-width:500px) {
         header {
-            display:flex;
-            background-color: #fdcd6c; 
-            width:100%;
-            margin-left: auto;
-            margin-right: auto;
-            justify-content: space-between;
-        }
-        #container {
-            background-color: #302715;
-            width: 80%;
             margin-left: auto;
             margin-right: auto;
         }
-        #navbutton {
-            background-color: #fdcd6c;
-            border:none;
-            cursor:pointer;
-        }
-        #navbutton:hover {
-            background-color: #d2ab5a;
-        }
-        #navbutton:active {
-            background-color: #a5884c;
-        }
-        #lastfmbutton {
-            background-color: #fdcd6c;
-            border: none;
-            cursor: pointer;
-        }
-        #lastfmbutton:hover {
-            background-color: #d2ab5a;
-        }
-        #lastfmbutton:active {
-            background-color: #a5884c;
-        }
-        #hyperlink {
-            color:#d2ab5a;
-        }
-        #hyperlink:hover {
-            color:#a5884c;
-        }
-        #hyperlink:active {
-            color:#756037;
-        }
-        .text1 {
-            margin-left:10px;
-            color: #fdcd6c;
-        }
-        .text2 {
-            margin-left:10px;
-            margin-right:10px;
-            color: #fdcd6c;
-            text-align:center;
-        }
-    </style>
-    <script>
-        function ShowLastFM() {
-            var element = document.getElementById("lastfm");
-            var element2 = document.getElementById("lastfmbutton");
-            if (element.style.display === 'none') {
-                element.style.display = 'block';
-            } else {
-                element.style.display = 'none';
-            }
-            if (element2.textContent === 'show') {
-                element2.textContent = 'hide';
-            } else {
-                element2.textContent = 'show';
-            }
-        };
-    </script>
-    <body>
-        <div id="container">
-            <header>
-                <div style="display:flex;cursor:pointer;">
-                    <h1 style="padding-left: 20px;font-size:20px;padding-top:8px">nukesbrainload</h1>
-                    <img src="../images/nukesbrainload.png" alt="Logo" height="40" style="padding-left:10px;padding-top:12px;"></img>
-                    <div style="margin-left:10px;border-left:2px solid;height:65px"></div>
-                </div>
-                    <marquee direction="right" style="font-size:25px;padding-top:16px">YOU'RE CURRENTLY AT THE HOMEPAGE</marquee>
-                <div style="display:flex">
-                    <div style="border-left:2px solid;height:65px"></div>
-                    <button id="navbutton" style="margin-left:10px;">home</button>
-                    <button id="navbutton" onclick="location.href = 'about';">about</button>
-                    <button id="navbutton" onclick="location.href = 'blog';">blog</button>
-                </div>
-            </header>
-            <h1 class="text2">welcome to nukesbrainload!</h1>
-            <img src="../images/nukesbrainloadextra.png" alt="Logo" style="border: 1px solid #756037;display:block;margin-left:auto;margin-right:auto;width:500px"></img>
-            <h2 class="text2">i'm nuke.</h2>
-            <p class="text2">i'm 14, take interest in tech, music, games and art, and am also professionally silly :3</p>
-            <p class="text2">this website has a blog, check it out <a id="hyperlink" href="blog">here.</a></p>
-            <h3 class="text2"><a id="hyperlink" href="about">learn more!!!</a></h3>
-            <h6 class="text1" style="padding-bottom:10px;">created in 2022; used in 2023</h6>
+    }
+    .navbutton {
+        border: 2px solid #251f00;
+        background-color: #daad00;
+        height: 90%;
+        width: 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .navbutton:hover {
+        background-color: #cca200;
+    }
+    .navbutton:active {
+        background-color: #b28d00;
+    }
+    .hbutton {
+        margin-bottom: 3px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #daad00;
+        display: block;
+        border: none;
+        font-size:40px;
+        width:200px;
+    }
+    .hbutton:hover {
+        background-color: #cca200;
+    }
+    .hbutton:active {
+        background-color: #b28d00;
+    }
+    .hidebutton {
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #daad00;
+        display: block;
+        border: none;
+        font-size:20px;
+        width:150px;
+    }
+    .hidebutton:hover {
+        background-color: #cca200;
+    }
+    .hidebutton:active {
+        background-color: #b28d00;
+    }
+    .text {
+        text-align:center;
+    }
+    img {
+        margin-left:auto;
+        margin-right:auto;
+        border: 2px solid #daad00;
+        display:block;
+        max-width:100%
+    }
+    ul { 
+    	position: relative; 
+    	display: inline-block; 
+    	padding-left: 1em; 
+    	left: 50%; 
+    	transform: translateX(-50%); 
+        margin-top: auto;
+        margin-bottom: auto;
+    } 
+</style>
+<body>
+    <header>
+        <h1 style="font-size:15px;padding-left:20px;padding-right:10px;margin-top:auto;margin-bottom:auto;display:inline;">nuke's brainload.</h1>
+        <img src="images/nblblack.png" style="height:80%;margin-top:auto;margin-bottom:auto;padding-right:10px;">
+        <div style="display:flex;">
+            <button class="navbutton">home</button>
+            <div style="height:65px;width:5px;"></div>
+            <button class="navbutton" style="margin-right:5px;" onclick="location.href = 'blog';">blog</button>
         </div>
-    </body>
+    </header>
+    <img src="../images/nblyellow.png" style="border:none;">
+    <h2 class="text">hi!! welcome to nuke's brainload<br>
+                    this page will introduce me, the website and more :p</h2>
+    <button class="hbutton" onclick="ShowHideAbout()">about</button>
+    <section id="absection" style="display: block;">
+        <h2 class="text">first, me and my interests!</h2>
+        <h3 class="text">HELLO!! im nuke :3</h3>
+        <img src="../images/nukedudeandnukeputewebsite.png" style="border:none;margin-bottom:20px;">
+        <ul class="text">
+            <li>username on most websites is nukicius</li>
+            <li>at the moment i am 15</li>
+            <li>i am dating samber :P</li>
+            <li>my timezone is CET</li>
+            <li>if u wanna be friends with me then-</li>
+            <li>-give us shit to do (games or whatevr) or else ill-</li>
+            <li>be bored as shit in the friendship ngl 😭😭</li>
+            <li>in terms of personality or whatever, i can sometimes be:</li>
+            <ul>
+                <li>chill</li>
+                <li>𝒻𝓇𝑒𝒶𝓀𝓎</li>
+                <li>very autistic</li>
+                <li>twinky</li>
+                <li>hyperactive</li>
+                <li>better to see for yourself tho</li>
+            </ul>
+            <li>those two heads you see above are:</li>
+            <ul>
+                <li><a href="gallery">nukedude</a>, my persona</li>
+                <li><a href="gallery">nukepute</a>, my fursona</li>
+            </ul>
+        </ul>
+        <h4 class="text">socials:</h4>
+        <ul class="text">
+            <li>some of these are inactive but whatever</li>
+            <li>nukicius</li>
+            <ul>
+                <li>discord</li>
+                <li>youtube</li>
+                <li>soundcloud</li>
+                <li>tiktok</li>
+                <li>gitlab</li>
+                <li>steam</li>
+                <li>etc. since this is my main user</li>
+            </ul>
+            <li>nukiciusly - twitter</li>
+            <li>nuketwitchs - twitch (self-explanitory)</li>
+            <li>nukedudes - github</li>
+            <li>TheNukeWithinTheFlow - roblox</li>
+        </ul>
+        
+        <h3 class="text">i have a bunch of interests, namelyy</h3>
+        <p class="text">TECH!!!</p>
+        <img src="../images/windowstux.png" style="border:none;margin-bottom:20px;">
+        <ul class="text">
+            <li>BIGGEST nerd about it. LEGIT</li>
+            <li>own 4 laptops, 2002; 2012; 2016; 2021</li>
+            <li>own some old phones</li>
+            <li>i use linux (im not annoying about it i promise)</li>
+            <li>i have an arduino uno</li>
+            <li>unfortunately unfulfilled in this department</li>
+            <ul>
+                <li>theres so much tech i want but cant get cuz 15</li>
+                <li>like HOLY SHIT. you wouldnt believe it</li>
+            </ul>
+        </ul>
+        <p class="text">MUSIC!!!</p>
+        <img src="../images/yellowfasttrackerii.png" style="border:none;margin-bottom:20px;">
+        <ul class="text">
+            <li>own 3 instruments</li>
+            <ul>
+                <li>electric guitar - JET JS-400</li>
+                <li>classical guitar - ORTEGA R55BFT</li>
+                <li>keyboard - YAMAHA YPT-240</li>
+            </ul>
+            <li>looking to play drums but doesnt seem possible atm</li>
+            <li>wanna be a music artist but im lazy 😭</li>
+            <ul>
+                <li>I LEGIT HAVE WHAT I NEED</li>
+                <li>AUDIO INTERFACE AND EVERYTHING</li>
+                <li>WHY WONT MY BRAIN LET ME START</li>
+            </ul>
+            <li>i listen to a bunch of shit, check my last.fm</li>
+            <ul>
+                <li><a href="https://last.fm/user/nukicius" target="_blank">https://last.fm/user/nukicius</a></li>
+                <li>if u dont wanna check then my fav artists atm are</li>
+                <ul>
+                    <li>glass beach</li>
+                    <li>fearofdark</li>
+                    <li>nobonoko</li>
+                    <li>tim follin (i also like many VGMs in general)</li>
+                    <li>pink floyd</li>
+                    <li>voyager</li>
+                    <li>(bit basic but shut up) tyler the creator</li>
+                    <li>(BIT BASIC BUT SHUT UP) tame impala</li>
+                    <li>there are more but im 2 lazy to list ngl</li>
+                </ul>
+            </ul>
+            <li>feel free to recommend stuff i should listen 2!!</li>
+        </ul>
+        <p class="text">GAMING!!!</p>
+        <img src="../images/gamingxboxwebsite.png" style="border:none;margin-bottom:20px;">
+        <ul class="text">
+            <li>one of my lesser interests but-</li>
+            <li>-still notable!</li>
+            <li>i own a switch and xbox series S</li>
+            <li>i play on my xbox alot with gamepass</li>
+            <li>my laptop is ass so i do light PC gaming</li>
+            <li>games i like:</li>
+            <ul>
+                <li>skate 3</li>
+                <li>roblox</li>
+                <li>minecraft</li>
+                <li>portal 1/2</li>
+                <li>half life 1/2</li>
+                <li>oneshot</li>
+                <li>minesweeper</li>
+                <li>solitaire</li>
+                <li>TTD/openTTD</li>
+                <li>RCT2/openRCT2</li>
+                <li>RCT3</li>
+                <li>sam & max (all games :3)</li>
+                <li>day of the tentacle (not porn.)</li>
+                <li>worms armageddon</li>
+                <li>doom</li>
+                <li>tomodachi life</li>
+                <li>gmod</li>
+                <li>subnautica (both)</li>
+                <li>osu!mania</li>
+                <li>fallout (wanna get more into it)</li>
+                <li>rec room (I PROMISE IM NOT 9.)</li>
+                <li>need for speed</li>
+                <li>gran turismo</li>
+                <ul>
+                    <li>FUCK YOU XBOX YOU REMOVED-</li>
+                    <li>-FREE EMULATION I CANT ENJOY-</li>
+                    <li>-MY LOVELY GT4 ANYMORE :(</li>
+                </ul>
+            </ul>
+        </ul>
+        <p class="text">ART!!!</p>
+        <img src="../images/artsynukedudewebsite.png" style="border:none;margin-bottom:20px;">
+        <ul class="text">
+            <li>im artsy :)</li>
+            <li>i draw a bunch of times, not-</li>
+            <li>-really the greatest at it but-</li>
+            <li>-it makes my head feel neat</li>
+            <li>i make pixel art sometimes,,</li>
+            <li>i draw with a mouse on GIMP</li>
+            <li>i also use GIMP for photoshopping stuff</li>
+            <ul>
+                <li>pretty good at it actually lmao</li>
+            </ul>
+            <li>check out my <a href="gallery">gallery</a> to see my art!!</li>
+            <li>btw i REALLY like louis wain's art:</li>
+            <img src="../images/blackcatsdancinginthemoonlight.jpg" style="width:300px;">
+        </ul>
+        <p class="text">YOUTUBE!!!</p>
+        <img src="../images/youtubenukedudewebsite.png" style="border:none;margin-bottom:20px;">
+        <ul class="text">
+            <li>im a professional YouTube Watcher.</li>
+            <li>maybe sometime a youtuber but who cares</li>
+            <li>i watch many channels but these are my favs:</li>
+            <ul>
+                <li>LGR</li>
+                <li>shank mods</li>
+                <li>mattkc</li>
+                <li>dankpods</li>
+                <li>the 8-bit guy</li>
+                <li>michael mjd</li>
+                <li>emplemon</li>
+                <li>xploshi</li>
+                <li>alan becker</li>
+                <li>peter knetter</li>
+                <li>niko</li>
+                <li>gone_fishinq</li>
+                <li>fredrik knudsen</li>
+                <li>okayxairen</li>
+                <li>isaacwhy</li>
+                <li>vinesauce vinny</li>
+                <li>vinesauce joel :))))</li>
+            </ul>
+        </ul>
+        <h2 class="text">second, the website!</h2>
+        <img src="../images/miniwebsite.png" style="border:none;margin-bottom:20px;">
+        <ul class="text" style="margin-bottom:20px;">
+            <li>this is my personal website</li>
+            <li>it serves as an introduction to me</li>
+            <li>it has a personal art gallery!</li>
+            <li>it has a blog!</li>
+            <ul>
+                <li>spent a BUNCH of time on it</li>
+                <li>so ermm i hope u like it 🥺🥺</li>
+            </ul>
+            <li>all around fun thing</li>
+            <li>feel free to suggest stuff 4 the website!!</li>
+        </ul>
+        <button class="hidebutton" onclick="ShowHideAbout()">hide section</button>
+    </section>
+    <button class="hbutton" onclick="location.href='gallery'">gallery</button>
+    <button class="hbutton" onclick="location.href='blog'">blog</button>
+    <h5 class="text">made in 2022.<br>
+                    redesigned in 2024.<br>
+                    this page was last updated 23.05.2024.</h5>
+</body>
+<script>
+    function ShowHideAbout() {
+        var section = document.getElementById("absection");
+        if (section.style.display === 'none') {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+    };
+</script>
 </html>
